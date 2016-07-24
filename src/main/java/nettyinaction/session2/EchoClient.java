@@ -1,4 +1,4 @@
-package nettlearn.session2;
+package nettyinaction.session2;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -13,10 +13,13 @@ import java.net.InetSocketAddress;
 public class EchoClient {
     private final String host;
     private final int port;
+
     public EchoClient(String host, int port) {
 
-        this.host = host;this.port = port;
+        this.host = host;
+        this.port = port;
     }
+
     public void start() throws Exception {
         EventLoopGroup group = new NioEventLoopGroup();
         try {
@@ -34,7 +37,8 @@ public class EchoClient {
             group.shutdownGracefully().sync();
         }
     }
+
     public static void main(String[] args) throws Exception {
-        new EchoClient("localhost", 65535).start();
+        new EchoClient("127.0.0.1", 8000).start();
     }
 }

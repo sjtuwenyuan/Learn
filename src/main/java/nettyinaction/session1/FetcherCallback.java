@@ -1,4 +1,4 @@
-package nettylearn.session1;
+package nettyinaction.session1;
 
 public interface FetcherCallback {
     void onData(Data data) throws Exception;

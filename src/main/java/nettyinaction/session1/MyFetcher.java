@@ -1,4 +1,4 @@
-package nettylearn.session1;
+package nettyinaction.session1;
 
 
 public class MyFetcher implements Fetcher {

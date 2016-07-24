@@ -1,4 +1,4 @@
-package nettlearn.session2;
+package nettyinaction.session2;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -41,7 +41,7 @@ public class EchoServer {
 
 
     public static void main(String[] args) throws Exception {
-        new EchoServer(65535).start();
+        new EchoServer(8000).start();
     }
 
 
