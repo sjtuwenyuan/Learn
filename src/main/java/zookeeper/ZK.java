@@ -14,9 +14,9 @@ public class ZK {
 
             }
         });
-        zooKeeper.create("root", "mydata".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
-        zooKeeper.create("/root/childone", "childone".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
-        System.out.println(zooKeeper.getChildren("/root", true));
-
+        zooKeeper.create("/yuan", "this is yuan".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        zooKeeper.create("/yuan/hui", "this is hui".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        System.out.println(zooKeeper.getChildren("/", true));
+        System.out.print(new String(zooKeeper.getData("/yuan",true,null)));
     }
 }
