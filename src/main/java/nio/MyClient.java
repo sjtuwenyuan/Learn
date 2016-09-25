@@ -65,7 +65,7 @@ public class MyClient {
                 ByteBuffer buffer = ByteBuffer.allocateDirect(1024);  
                 byte[] bytes;  
                 int count = 0;  
-                while ((count = socketChannel.read(buffer)) >= 0) {  
+                while ((count = socketChannel.read(buffer)) >= 0) {
                     buffer.flip();  
                     bytes = new byte[count];  
                     buffer.get(bytes);  
